@@ -31,6 +31,7 @@ func TestGraphCmd_v013(t *testing.T) {
 
 		assertCmd(t, []string{
 			"graph",
+			"-no-color",
 		}, nil, graphCmd)
 	})
 
@@ -45,6 +46,7 @@ func TestGraphCmd_v013(t *testing.T) {
 			"teststate",
 			"-draw-cycles",
 			"-type=output",
+			"-no-color",
 		}, nil, graphCmd)
 	})
 }
@@ -65,6 +67,7 @@ func TestGraphCmd_v1(t *testing.T) {
 
 		assertCmd(t, []string{
 			"graph",
+			"-no-color",
 		}, nil, graphCmd)
 	})
 
@@ -79,6 +82,7 @@ func TestGraphCmd_v1(t *testing.T) {
 			"-plan=teststate",
 			"-draw-cycles",
 			"-type=output",
+			"-no-color",
 		}, nil, graphCmd)
 	})
 }

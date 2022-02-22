@@ -29,12 +29,12 @@ func TestImportCmd(t *testing.T) {
 
 		assertCmd(t, []string{
 			"import",
-			"-no-color",
 			"-input=false",
 			"-lock-timeout=0s",
 			"-lock=true",
 			"my-addr",
 			"my-id",
+			"-no-color",
 		}, nil, importCmd)
 	})
 
@@ -56,7 +56,6 @@ func TestImportCmd(t *testing.T) {
 
 		assertCmd(t, []string{
 			"import",
-			"-no-color",
 			"-input=false",
 			"-backup=testbackup",
 			"-lock-timeout=200s",
@@ -69,6 +68,7 @@ func TestImportCmd(t *testing.T) {
 			"-var", "var2=bar",
 			"my-addr2",
 			"my-id2",
+			"-no-color",
 		}, nil, importCmd)
 	})
 }

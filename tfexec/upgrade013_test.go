@@ -36,8 +36,8 @@ func TestUpgrade013(t *testing.T) {
 
 		assertCmd(t, []string{
 			"0.13upgrade",
-			"-no-color",
 			"-yes",
+			"-no-color",
 		}, nil, upgrade013Cmd)
 	})
 
@@ -57,9 +57,9 @@ func TestUpgrade013(t *testing.T) {
 
 		assertCmd(t, []string{
 			"0.13upgrade",
-			"-no-color",
 			"-yes",
 			"upgrade013dir",
+			"-no-color",
 		}, nil, upgrade013Cmd)
 	})
 
