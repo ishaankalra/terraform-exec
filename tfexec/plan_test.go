@@ -29,13 +29,13 @@ func TestPlanCmd(t *testing.T) {
 
 		assertCmd(t, []string{
 			"plan",
+			"-no-color",
 			"-input=false",
 			"-detailed-exitcode",
 			"-lock-timeout=0s",
 			"-lock=true",
 			"-parallelism=10",
 			"-refresh=true",
-			"-no-color",
 		}, nil, planCmd)
 	})
 
@@ -62,6 +62,7 @@ func TestPlanCmd(t *testing.T) {
 
 		assertCmd(t, []string{
 			"plan",
+			"-no-color",
 			"-input=false",
 			"-detailed-exitcode",
 			"-lock-timeout=22s",
@@ -79,7 +80,6 @@ func TestPlanCmd(t *testing.T) {
 			"-var", "android=paranoid",
 			"-var", "brain_size=planet",
 			"earth",
-			"-no-color",
 		}, nil, planCmd)
 	})
 

@@ -30,10 +30,10 @@ func TestStateRmCmd(t *testing.T) {
 		assertCmd(t, []string{
 			"state",
 			"rm",
+			"-no-color",
 			"-lock-timeout=0s",
 			"-lock=true",
 			"testAddress",
-			"-no-color",
 		}, nil, stateRmCmd)
 	})
 
@@ -46,6 +46,7 @@ func TestStateRmCmd(t *testing.T) {
 		assertCmd(t, []string{
 			"state",
 			"rm",
+			"-no-color",
 			"-backup=testbackup",
 			"-backup-out=testbackupout",
 			"-lock-timeout=200s",
@@ -53,7 +54,6 @@ func TestStateRmCmd(t *testing.T) {
 			"-state-out=teststateout",
 			"-lock=false",
 			"testAddress",
-			"-no-color",
 		}, nil, stateRmCmd)
 	})
 }

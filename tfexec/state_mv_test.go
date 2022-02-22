@@ -30,11 +30,11 @@ func TestStateMvCmd(t *testing.T) {
 		assertCmd(t, []string{
 			"state",
 			"mv",
+			"-no-color",
 			"-lock-timeout=0s",
 			"-lock=true",
 			"testsource",
 			"testdestination",
-			"-no-color",
 		}, nil, stateMvCmd)
 	})
 
@@ -47,6 +47,7 @@ func TestStateMvCmd(t *testing.T) {
 		assertCmd(t, []string{
 			"state",
 			"mv",
+			"-no-color",
 			"-backup=testbackup",
 			"-backup-out=testbackupout",
 			"-lock-timeout=200s",
@@ -55,7 +56,6 @@ func TestStateMvCmd(t *testing.T) {
 			"-lock=false",
 			"testsrc",
 			"testdest",
-			"-no-color",
 		}, nil, stateMvCmd)
 	})
 }

@@ -26,8 +26,8 @@ func TestShowCmd(t *testing.T) {
 
 	assertCmd(t, []string{
 		"show",
-		"-json",
 		"-no-color",
+		"-json",
 	}, nil, showCmd)
 }
 
@@ -46,9 +46,9 @@ func TestShowStateFileCmd(t *testing.T) {
 
 	assertCmd(t, []string{
 		"show",
+		"-no-color",
 		"-json",
 		"statefilepath",
-		"-no-color",
 	}, nil, showCmd)
 }
 
@@ -67,9 +67,9 @@ func TestShowPlanFileCmd(t *testing.T) {
 
 	assertCmd(t, []string{
 		"show",
+		"-no-color",
 		"-json",
 		"planfilepath",
-		"-no-color",
 	}, nil, showCmd)
 }
 
